@@ -13,7 +13,7 @@ int queue[size];
 void  insert()
 {
 	int input;
-	cout<<"enetr elemnet"<<endl;
+	cout<<"enter element"<<endl;
 	cin>>input;
 	if(rear==-1 && front==-1)
 	{
