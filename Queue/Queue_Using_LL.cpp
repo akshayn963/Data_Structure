@@ -14,15 +14,6 @@ Node *front = NULL;
 Node *rear = NULL;
 
 
-int isempty()
-{
- if(front == NULL && rear == NULL)
- return 1;
- else
- return 0;
-}
-
-
 void enqueue ( int input )
 {
  Node *ptr = new Node();
@@ -43,7 +34,7 @@ void enqueue ( int input )
 
 void dequeue ( )
 {
- if( isempty() )
+ if( front == NULL && rear == NULL )
  cout<<"Queue is empty\n";
  else
 
@@ -65,7 +56,7 @@ void dequeue ( )
 
 void displayQueue()
 {
- if (isempty())
+ if (front == NULL && rear == NULL)
   cout<<"Queue is empty\n";
  else
  {
