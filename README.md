@@ -1,6 +1,7 @@
 # Data_Structure
 
 Linked_List
+
 SINGLY LINKED LIST =>
 
        - Insert at beg
@@ -31,14 +32,14 @@ Doubly Linked List =>
 Circular Linked list
 
       - Normal Insertion
-2)QUEUE
+2) QUEUE
 
     Circular queue
   
         - Queue operation
         - Queue using linkedlist
         * Queue using array
-SORTING
+3) SORTING
 
      - Binary Search
      - Linear Search
@@ -50,11 +51,11 @@ SORTING
      - Merge sort
      - Quick sort
      - Selection sort
-4)STACK
+4) STACK
 
         -  Stack using array
         -  Stack using linkedlist
-5)TREE - Binary search tree
+5) TREE - Binary search tree
 
         - Binary search tree remove element
         - Inorder
