@@ -3,62 +3,45 @@
 using namespace std;
 
 
-
-// insertion at rear end of link list
-    void connection(struct node*, struct node *);
-    void traverse(struct node *);
-    struct node* firstnode(int);
-    struct node* createnode(int);
-struct node
-{
-	int data;
-	
-	struct node * next;
+class node{
+    public:
+    int data;
+    node *next;
 };
 
-struct node * firstnode(int input)
+node * createnode(int input)
 {
-	struct node *n = (struct node *)malloc(sizeof(struct node));
-	
-	n->data =input;
-	n->next = NULL;
-	
-	return n;
+node * newNode=new node();
+newNode->data=input;
+newNode->next=NULL;
+return newNode;
 }
 
-struct node* createnode(int input)
+void connection(node *x,node *y)
 {
-	struct node *n1 = (struct node *)malloc(sizeof(struct node));
-	
-	n1->data=input;
-	n1->next=NULL;
-	
-	return n1;
-	
+   x->next=y;
 }
 
-void connection(struct node *x, struct node *y)
-{
-	x->next=y;
+void traverse(node *temp){
+    while (temp!=NULL)
+    {
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+    
 }
 
-void traverse(struct node *temp)
-{
-    cout<<"reverse linklist=";
-	while(temp !=NULL)
-	{
-		//cout<<temp->next<<endl;
-		cout<<temp->data<<" ";
-		temp=temp->next;
-	}
-}
 int main()
 {
-struct node * d=firstnode(10);
-struct node* d1=createnode(20);
-struct node* d2=createnode(30);
-connection(d,d1);
-connection(d1,d2);
-traverse(d);
-return 0;	
+    node *n1=createnode(10);
+    node *n2=createnode(20);
+    node *n3=createnode(30);
+
+    connection(n3,n2);
+    connection(n2,n1);
+
+  
+    traverse(n3);
+   
+    return 0;
 }
