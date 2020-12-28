@@ -58,7 +58,7 @@ Circular Linked list
 5) TREE - Binary search tree
 
         - Binary search tree remove element
-        - Inorder
+        - Inorder with deletion
         - Preorder
         - Postorder
         - Find any element
