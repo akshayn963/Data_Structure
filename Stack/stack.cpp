@@ -1,12 +1,13 @@
  #include <iostream>
 using namespace std;
-int stack[10], n=10, top=-1;
+int stack[5], n=5, top=-1;
 void push(int val) {
    if(top>=n-1)
    cout<<"Stack Overflow"<<endl;
    else {
       top++;
       stack[top]=val;
+      cout<<"inserted value in stack ="<<stack[top]<<endl;
    }
 }
 void pop() {
@@ -24,7 +25,7 @@ void display() {
       cout<<stack[i]<<" ";
       cout<<endl;
    } else
-   cout<<"Stack is empty";
+   cout<<"Stack is empty"<<endl;
 }
 int main() {
    int ch, val;
@@ -32,7 +33,7 @@ int main() {
    cout<<"2) Pop from stack"<<endl;
    cout<<"3) Display stack"<<endl;
    cout<<"4) Exit"<<endl;
-   do {
+   while(true) {
       cout<<"Enter choice: "<<endl;
       cin>>ch;
       switch(ch) {
@@ -59,6 +60,6 @@ int main() {
             cout<<"Invalid Choice"<<endl;
          }
       }
-   }while(ch!=4);
+   }
    return 0;
 }
